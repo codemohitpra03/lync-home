@@ -2082,11 +2082,19 @@
         pointer-events: none;
       }
     </style>
-
+	<script>
+		const interval = setInterval(function(){
+			if(document.readyState == 'complete'){
+				// alert('readyState is ' + document.readyState)
+				document.getElementById('my-body').style.visibility = "visible"
+				clearInterval(interval);
+			}
+		},0)
+    </script>
     <!-- End of headEnd -->
   </head>
 
-  <body class="framer-body-DS2P5OXNH">
+  <body id="my-body" class="framer-body-DS2P5OXNH" style="visibility: hidden;">
     <script
       async
       src="https://events.framer.com/script"

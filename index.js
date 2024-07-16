@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function (req, res, next) {
-	res.render('home.ejs');
+	res.redirect('/lync.html');
 })
 
 app.listen(PORT, function (err) {
